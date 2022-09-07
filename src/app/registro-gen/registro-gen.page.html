@@ -1,9 +1,32 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>registro_gen</ion-title>
+    <ion-title>
+      Blank
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <div id="container">
+    <div class="butons">
+
+      <div class="btn-on">
+        <ion-button expand="undefined" size="large" fill="outline" [routerLink]="['/registro-p']"> Chofer </ion-button>
+      </div>
+
+      <div class="btn-on">
+        <ion-button expand="undefined" size="large" fill="outline" [routerLink]="['/registro-u']"> Estudiante </ion-button>
+      </div>
+
+    </div>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']"> Volver al inicio </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

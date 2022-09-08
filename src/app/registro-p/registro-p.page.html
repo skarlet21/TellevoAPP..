@@ -10,7 +10,7 @@
 
   <div id="container">
     <div class="">
-      <br><br>
+      
       <ion-card>
         <form>
           <ion-item>
@@ -21,12 +21,12 @@
           <ion-item>
             <ion-label position="floating">correo</ion-label>
             <ion-input type="email" placeholder="...">
-              </ion-input>
+            </ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label position="floating"> Contraseña</ion-label>
-            <ion-input type="password"  placeholder="******"></ion-input>
+            <ion-input type="password" placeholder="******"></ion-input>
           </ion-item>
 
           <ion-item>
@@ -36,20 +36,25 @@
 
           <ion-item>
             <ion-label position="floating">patente</ion-label>
-            <ion-input type="text" ></ion-input>
+            <ion-input type="text"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">color</ion-label>
-            <ion-input type="text" ></ion-input>
+            <ion-list>
+              <ion-item>
+                <ion-select placeholder="Color">
+                  <ion-select-option value="apples">Negro</ion-select-option>
+                  <ion-select-option value="oranges">Blanco</ion-select-option>
+                  <ion-select-option value="bananas">Rojo</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
           </ion-item>
           <a href="#">...</a>
         </form>
-        <ion-button> ingresar</ion-button>
-
       </ion-card>
 
-
+      <ion-button> ingresar</ion-button>
 
     </div>
   </div>

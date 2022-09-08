@@ -3,3 +3,15 @@
 .fon{
     background-color: black;
 }
+
+.caja-one{
+    position: relative;
+    margin: auto;
+    display: block;
+    background: linear-gradient(to bottom, rgb(255, 136, 0), rgb(255, 226, 203));
+    height: 30vh;
+    width: 85%;
+    max-width:100%;
+    max-height: 100%;
+    border-radius: 6px;
+}

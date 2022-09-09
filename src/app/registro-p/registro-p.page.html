@@ -12,46 +12,40 @@
     <div class="">
       
       <ion-card>
-        <form>
+        <form [formGroup]="formularioRegistro" (keyuo.enter)="guardar()">
           <ion-item>
             <ion-label position="floating">Nombre completo</ion-label>
-            <ion-input type="text" placeholder=".."></ion-input>
+            <ion-input type="text" formControlName="nombre"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label position="floating">correo</ion-label>
-            <ion-input type="email" placeholder="...">
-            </ion-input>
+            <ion-input type="email" formControlName="email"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label position="floating"> Contraseña</ion-label>
-            <ion-input type="password" placeholder="******"></ion-input>
+            <ion-input type="password" formControlName="password" ></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label position="floating"> Verificar Contraseña</ion-label>
-            <ion-input type="password" placeholder="******"></ion-input>
+            <ion-input type="password" formControlName="confirmacionPassword"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label position="floating">patente</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" formControlName="patente"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-list>
-              <ion-item>
-                <ion-select placeholder="Color">
-                  <ion-select-option value="apples">Negro</ion-select-option>
-                  <ion-select-option value="oranges">Blanco</ion-select-option>
-                  <ion-select-option value="bananas">Rojo</ion-select-option>
-                </ion-select>
-              </ion-item>
-            </ion-list>
+            <ion-label position="floating">color</ion-label>
+            <ion-input type="text" formControlName="color"></ion-input>
           </ion-item>
-          <a href="#">...</a>
-        </form>
+          
+          <ion-button (click)="guardar()" [routerLink]="['/home']"> registrar</ion-button>
+        
+        </form>    
       </ion-card>
 
       <ion-button> ingresar</ion-button>

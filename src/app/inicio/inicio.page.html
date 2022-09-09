@@ -1,23 +1,65 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="dark">
+    <!--menu-->
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-icon class="icon-m" slot="start" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!--modal-->
+    <div class="ion-padding">
+      <ion-icon id="open-modal" class="icon" name="person-circle-sharp"></ion-icon>
+    </div>
+    <ion-title class="tit">
+      Te Llevo APP
     </ion-title>
+
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content class="fon">
+<ion-content color="dark" class="fon">
+
 
   <div id="container">
     <br><br>
-    <div class="caja-one"></div>
+    <div class="caja-one">
+      <h3>Autos Disponibles</h3>
+    </div>
   </div>
-</ion-content>
 
-<ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/home']"> Volver al inicio </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="Mensaje">
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        <ion-label>Mensajes</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="Solicitar">
+        <ion-icon name="add-circle"></ion-icon>
+        <ion-label>Solicitar Auto</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="Actividades">
+        <ion-icon name="bookmark-outline"></ion-icon>
+        <ion-label>Actividades</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cerrar</ion-button>
+          </ion-buttons>
+          <ion-title></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-icon id="open-modal" class="icon" name="person-circle-sharp"></ion-icon>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+
+</ion-content>

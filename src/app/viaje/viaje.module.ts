@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InicioPageRoutingModule } from './inicio-routing.module';
+import { ViajePageRoutingModule } from './viaje-routing.module';
 
-import { InicioPage } from './inicio.page';
+import { ViajePage } from './viaje.page';
 
-import { SwiperModule} from 'swiper/angular';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule,
-    SwiperModule
+    ViajePageRoutingModule
   ],
-  declarations: [InicioPage]
+  declarations: [ViajePage]
 })
-export class InicioPageModule {}
+export class ViajePageModule {}

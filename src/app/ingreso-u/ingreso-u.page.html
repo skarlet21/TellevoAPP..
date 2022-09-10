@@ -1,14 +1,14 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Blank
+      TellevoAPP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="secondary">
 
-  <div id="container">
+  <div   id="container">
     <div class="">
       <br><br>
       <ion-card>
@@ -21,16 +21,15 @@
 
           <ion-item>
             <ion-label position="floating"> Contraseña</ion-label>
-            <ion-input type="password" formControlName="password" ></ion-input>
+            <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
+          <br><br>
+          <ion-button fill="outline" (click)="ingresar()" [routerLink]="['/inicio']"> ingresar</ion-button>
 
-          <ion-button (click)="ingresar()" [routerLink]="['/home']"> ingresar</ion-button>
         </form>
 
-      </ion-card>      
-      
+      </ion-card>
       <br><br>
-      <ion-button> ingresar</ion-button>
 
 
     </div>

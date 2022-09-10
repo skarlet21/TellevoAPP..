@@ -1,17 +1,17 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Blank
+      TellevoAPP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content color="secondary">
 
   <div id="container">
-    <div class="">
+    <div class="" >
       
-      <ion-card>
+      <ion-card fill="outline" >
         <form [formGroup]="formularioRegistro" (keyuo.enter)="guardar()">
           <ion-item>
             <ion-label position="floating">Nombre completo</ion-label>
@@ -42,13 +42,11 @@
             <ion-label position="floating">color</ion-label>
             <ion-input type="text" formControlName="color"></ion-input>
           </ion-item>
-          
-          <ion-button (click)="guardar()" [routerLink]="['/home']"> registrar</ion-button>
-        
-        </form>    
-      </ion-card>
+        </form>  
+        <br><br>  
+        <ion-button fill="outline"(click)="guardar()" [routerLink]="['/inicio']"> registrar</ion-button>
 
-      <ion-button> ingresar</ion-button>
+      </ion-card>
 
     </div>
   </div>
@@ -57,7 +55,7 @@
 <ion-footer>
   <ion-toolbar color="primary">
     <ion-buttons slot="end">
-      <ion-button [routerLink]="['/home']"> Volver al inicio </ion-button>
+      <ion-button [routerLink]="['/registro-gen']"> Volver al inicio </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>

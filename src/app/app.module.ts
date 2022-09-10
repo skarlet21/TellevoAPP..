@@ -8,9 +8,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [AppComponent, MenuComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule,BrowserAnimationsModule,
+    IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 
   exports: [MenuComponent],
@@ -18,4 +21,4 @@ import { MenuComponent } from './menu/menu.component';
 })
 
 
-export class AppModule {}
+export class AppModule { }

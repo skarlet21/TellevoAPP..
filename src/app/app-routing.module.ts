@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -30,6 +30,18 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'viaje',
+    loadChildren: () => import('./viaje/viaje.module').then( m => m.ViajePageModule)
+  },
+  {
+    path: 'pago',
+    loadChildren: () => import('./pago/pago.module').then( m => m.PagoPageModule)
   },
 ];
 

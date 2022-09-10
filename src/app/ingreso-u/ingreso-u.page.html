@@ -8,23 +8,25 @@
 
 <ion-content color="secondary">
 
-  <div   id="container">
-    <div class="">
+  <div id="container">
+    <div class="login-box">
       <br><br>
-      <ion-card>
-        <form [formGroup]="formularioLogin">
+      <ion-card >
+        <form [formGroup]="formularioLogin" class="formulario">
 
-          <ion-item>
-            <ion-label position="floating">correo</ion-label>
-            <ion-input type="email" formControlName="email"></ion-input>
+          <ion-item >
+            <div class="userbox">
+              <ion-label position="floating">correo</ion-label>
+              <ion-input type="email" formControlName="email"></ion-input>
+            </div>
           </ion-item>
 
-          <ion-item>
-            <ion-label position="floating"> Contraseña</ion-label>
-            <ion-input type="password" formControlName="password"></ion-input>
+          <ion-item style="background-color: blue;">
+            <ion-label position="floating" style="background: transparent; z-index: 1;"> Contraseña</ion-label>
+            <ion-input type="password" formControlName="password" style="background: transparent; z-index: 0;"></ion-input>
           </ion-item>
           <br><br>
-          <ion-button fill="outline" (click)="ingresar()" [routerLink]="['/inicio']"> ingresar</ion-button>
+          <ion-button fill="outline" (click)="ingresar()" > ingresar</ion-button>
 
         </form>
 

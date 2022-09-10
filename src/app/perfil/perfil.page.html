@@ -1,5 +1,11 @@
 <ion-header>
+
   <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-icon class="icon-m" slot="start" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>perfil</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,9 +17,9 @@
 
   <h2>Bienvenido</h2>
 
-<br><br><br><br>
-<a href="">cambiar nombre </a>
-<a href=""> cambiar contraseña </a>
-<br>
-<ion-button expand="block" fill="outline">Cerrar sesion</ion-button>
+  <br><br><br><br>
+  <a href="">cambiar nombre </a>
+  <a href=""> cambiar contraseña </a>
+  <br>
+  <ion-button expand="block" fill="outline" [routerLink]="['/home']">Cerrar sesion</ion-button>
 </ion-content>

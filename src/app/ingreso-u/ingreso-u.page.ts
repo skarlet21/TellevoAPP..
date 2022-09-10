@@ -30,7 +30,6 @@ export class IngresoUPage implements OnInit {
     if(usuario.correo == f.correo && usuario.password == f.password){
       console.log('Ingresado');
     }else{
-      console.log(usuario)
       const alert = await this.alertController.create({
         header: 'Datos incorrectos',
         message: 'Los datos que ingresaste son incorrectos.',
